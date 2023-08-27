@@ -235,6 +235,7 @@ body {
 .post-content-single h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 700 !important;
+  margin-top: 40px !important;
 }
 
 .post-content-single h6 {
@@ -259,6 +260,21 @@ body {
 
 .post-content-single h1 {
   font-size: 25px !important;
+}
+
+.post-content-single img {
+  border-radius: 0.5rem !important;
+}
+
+.post-content-single a {
+  color: var(--secondary);
+  background-color: var(--bg-secondary);
+  font-weight: 400;
+  font-size: 10px;
+  display: inline;
+  padding: 2px 5px;
+  border-radius: 5px;
+  text-decoration: none !important;
 }
 /* End Content Posts */
 
