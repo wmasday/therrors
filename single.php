@@ -7,10 +7,10 @@
             the_post();
     ?>
             <div class="row mt-2 mb-5">
-                <div class="col-sm-7 text-center">
+                <div class="col-sm-7 text-center mb-5">
                     <h1 class="mb-2 post-title-single"><?php the_title(); ?></h1>
                     <span class="post-time-single"><?php the_time('F j, Y'); ?></span>
-                    <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="w-100 mt-3" />
+                    <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="w-100 mt-3 rounded-3" />
 
                     <div class="row mt-3">
                         <div class="col-8 post-category text-start">

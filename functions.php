@@ -1,26 +1,30 @@
 <?php
 
-// Import ressource and style.css
+// Start - Import ressource and style.css
 function import_scripts_and_styles()
 {
-    wp_enqueue_style('style', get_stylesheet_uri());
+    wp_enqueue_style('style', get_stylesheet_uri()); // Call style.css
+    wp_enqueue_style('bootstrap', get_stylesheet_uri() . '/src/bootstrap.min.css');
+    wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/src/js/bootstrap.min.js', array(), '', true);
 }
 add_action('wp_enqueue_scripts', 'import_scripts_and_styles');
+// End - Import ressource and style.css
 
 
+// Start - Setup Init
 function setup_init()
 {
-    // Register Menu
     register_nav_menus(array(
         'primary' => 'Primary Menu',
-    ));
+    )); // Register Menu
 
-    // Add Theme Support
-    add_theme_support('post-thumbnails');
+    add_theme_support('post-thumbnails'); // Add Theme Support For Post Thumbnail
 }
-
 add_action('after_setup_theme', 'setup_init');
+// End - Setup Init
 
+
+// Start - Add Class On 'li' In Nav Menu
 function add_additional_class_on_li($classes, $item, $args)
 {
     if (isset($args->add_li_class)) {
@@ -29,7 +33,10 @@ function add_additional_class_on_li($classes, $item, $args)
     return $classes;
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+// End - Add Class On 'li' In Nav Menu
 
+
+// Start - Add Class On 'a' In Nav Menu
 function add_menu_link_class($atts, $item, $args)
 {
     if (property_exists($args, 'link_class')) {
@@ -38,9 +45,10 @@ function add_menu_link_class($atts, $item, $args)
     return $atts;
 }
 add_filter('nav_menu_link_attributes', 'add_menu_link_class', 1, 3);
+// End - Add Class On 'a' In Nav Menu
 
 
-
+// Start - Excerpt Title Post
 function exerpt_title($title)
 {
     $max = 63;
@@ -49,3 +57,4 @@ function exerpt_title($title)
     return $response;
 }
 add_filter('the_title', 'exerpt_title', 10, 1);
+// End - Excerpt Title Post

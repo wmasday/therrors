@@ -18,16 +18,30 @@
         color: var(--secondary);
         font-size: 13px;
     }
+
+    @media only screen and (max-width: 1080px) {
+        .notfound-4 {
+            color: var(--secondary);
+            font-weight: 300;
+            font-size: 60px;
+        }
+
+        .image-0 {
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+        }
+    }
 </style>
 <main class="container pt-5">
     <div class="row justify-content-center mt-5">
-        <div class="col-3 text-end">
+        <div class="col-4 text-end">
             <span class="notfound-4">{ 4</span>
         </div>
-        <div class="col-3 text-center">
+        <div class="col-4 text-center">
             <img src="<?php echo get_template_directory_uri(); ?>/src/img/404.gif" class="image-0" alt="<?php bloginfo('name'); ?> 404 Not Found" />
         </div>
-        <div class="col-3 text-start">
+        <div class="col-4 text-start">
             <span class="notfound-4">4 }</span>
         </div>
     </div>
