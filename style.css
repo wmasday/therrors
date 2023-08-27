@@ -5,4 +5,93 @@ Description: Wordpress Templates For Blog
 Tags: Blog, Technology, Article
 Version: 1.0
 Note : -
+Host : localhost:3000
 */
+
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Nabla&family=Poppins:wght@300;400;500;600;700;800&family=Tourney:wght@900&family=Trispace:wght@600;700;800&display=swap");
+
+/* Init */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --danger: rgba(255, 71, 87, 1);
+  --bg-danger: rgba(255, 71, 87, 0.3);
+  --success: rgba(46, 213, 115, 1);
+  --bg-success: rgba(46, 213, 115, 0.3);
+  --primary: rgba(55, 66, 250, 1);
+  --bg-primary: rgba(55, 66, 250, 0.3);
+  --light: rgba(241, 242, 246, 1);
+  --bg-light: rgba(241, 242, 246, 0.3);
+  --secondary: rgba(164, 176, 190, 1);
+  --bg-secondary: rgba(164, 176, 190, 0.3);
+  --dark: rgba(47, 53, 66, 1);
+  --bg-dark: rgba(47, 53, 66, 0.3);
+  --info: rgba(30, 144, 255, 1);
+  --bg-info: rgba(30, 144, 255, 0.3);
+  --warning: rgba(246, 229, 141, 1);
+  --bg-warning: rgba(246, 229, 141, 0.3);
+  --white: rgba(255, 255, 255, 1);
+  --transparent: transparent;
+}
+
+body {
+  background-color: #000000 !important;
+}
+
+/* Header & Navbar */
+.current-menu-item a {
+  color: var(--light) !important;
+}
+
+.navbar-brand {
+  font-family: "Tourney", cursive;
+  color: var(--white) !important;
+  font-size: 25px !important;
+}
+
+.nav-link {
+  margin-top: 3px !important;
+  color: var(--secondary) !important;
+  font-size: 14px !important;
+  transition: 0.5s !important;
+}
+
+.nav-link:hover {
+  color: var(--light) !important;
+}
+
+.search-form {
+  background-color: var(--transparent) !important;
+  color: var(--secondary) !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  font-family: "Poppins", sans-serif !important;
+  border-style: none !important;
+  padding: 3px 0px 3px 0px !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--secondary) !important;
+  border-radius: 0% !important;
+  width: 300px !important;
+}
+
+::placeholder {
+  color: var(--secondary) !important;
+  opacity: 1;
+}
+
+:-ms-input-placeholder,
+::-ms-input-placeholder {
+  color: var(--secondary) !important;
+}
+
+@media only screen and (max-width: 1080px) {
+  .navbar form {
+    display: none !important;
+  }
+}
