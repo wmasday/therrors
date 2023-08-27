@@ -197,7 +197,7 @@ body {
 .post-content-single {
   color: var(--light);
   text-align: left !important;
-  font-size: 13px !important;
+  font-size: 14px !important;
 }
 
 .post-author-single {
@@ -218,6 +218,12 @@ body {
 @media only screen and (max-width: 1080px) {
   .post-content-single p {
     text-indent: 30px !important;
+  }
+
+  .post-content-single {
+    color: var(--light);
+    text-align: left !important;
+    font-size: 13px !important;
   }
 }
 
