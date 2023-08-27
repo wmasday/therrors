@@ -51,6 +51,10 @@ add_filter('nav_menu_link_attributes', 'add_menu_link_class', 1, 3);
 // Start - Excerpt Title Post
 function exerpt_title($title)
 {
+    if (is_single()) {
+        return $title;
+    }
+
     $max = 63;
     $rewriteTitle = substr($title, 0, $max);
     $response = strlen($title) > $max ? $rewriteTitle . " &hellip;" : $rewriteTitle;

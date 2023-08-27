@@ -1,4 +1,4 @@
-<div class="col-sm-12 post-item mb-3" style="height: 80px !important;">
+<div class="col-sm-12 post-item mb-3" style="height: auto !important;">
     <a href="<?php the_permalink(); ?>">
         <h6 class="mt-3 post-title"><?php the_title(); ?></h6>
     </a>

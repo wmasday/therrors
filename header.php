@@ -4,7 +4,22 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php bloginfo('name'); ?></title>
+    <?php
+    if (is_single()) :
+    ?>
+        <title><?php bloginfo('name'); ?> | <?php echo the_title(); ?></title>
+    <?php
+    elseif (is_category()) :
+    ?>
+        <title><?php bloginfo('name'); ?> | <?php $cat = get_the_category();
+                                            echo $cat[0]->cat_name; ?></title>
+    <?php
+    else :
+    ?>
+        <title><?php bloginfo('name'); ?></title>
+    <?php
+    endif;
+    ?>
     <?php wp_head(); ?>
 </head>
 

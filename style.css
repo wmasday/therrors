@@ -212,7 +212,13 @@ body {
 }
 
 .post-content-single p {
-  text-indent: 10px !important;
+  text-indent: 40px !important;
+}
+
+@media only screen and (max-width: 1080px) {
+  .post-content-single p {
+    text-indent: 30px !important;
+  }
 }
 
 .post-content-single h1,
