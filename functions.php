@@ -4,8 +4,8 @@
 function import_scripts_and_styles()
 {
     wp_enqueue_style('style', get_stylesheet_uri()); // Call style.css
-    wp_enqueue_style('bootstrap', get_stylesheet_uri() . '/src/bootstrap.min.css');
-    wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/src/js/bootstrap.min.js', array(), '', true);
+    wp_enqueue_style('bootstrap', get_stylesheet_directory_uri() . '/src/bootstrap/css/bootstrap.min.css');
+    wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/src/bootstrap/js/bootstrap.min.js', array(), '', true);
 }
 add_action('wp_enqueue_scripts', 'import_scripts_and_styles');
 // End - Import ressource and style.css
