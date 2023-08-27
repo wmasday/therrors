@@ -65,7 +65,9 @@ body {
 .nav-link:hover {
   color: var(--light) !important;
 }
+/* End Header & Navbar */
 
+/* Form Search Bar : searchform.php */
 .search-form {
   background-color: var(--transparent) !important;
   color: var(--secondary) !important;
@@ -90,8 +92,131 @@ body {
   color: var(--secondary) !important;
 }
 
+.search-col {
+  display: none !important;
+}
+
 @media only screen and (max-width: 1080px) {
   .navbar form {
     display: none !important;
   }
+  .search-col {
+    display: inline !important;
+  }
+
+  .search-col form input {
+    width: 100% !important;
+  }
 }
+
+/* End Form Search Bar : searchform.php */
+
+/* Content Posts */
+.post-item {
+  height: 310px !important;
+  cursor: pointer;
+}
+
+.post-item a {
+  text-decoration: none !important;
+}
+
+.post-item img {
+  width: 100% !important;
+  height: 200px !important;
+  border-radius: 10px;
+}
+
+.post-item .post-title {
+  font-weight: 500 !important;
+  color: var(--light) !important;
+}
+
+.post-category a {
+  color: var(--secondary);
+  background-color: var(--bg-secondary);
+  font-weight: 400;
+  font-size: 10px;
+  display: inline;
+  padding: 4px 7px;
+  border-radius: 5px;
+  text-decoration: none !important;
+}
+
+.post-time {
+  color: var(--bg-secondary);
+  font-size: 10px;
+  text-align: right;
+}
+
+.post-paginate {
+  width: 100px !important;
+}
+.post-paginate a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--bg-secondary) !important;
+  font-weight: 400;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+.paginate-old {
+  float: left;
+}
+
+.paginate-old {
+  float: right;
+}
+
+@media only screen and (max-width: 1080px) {
+  .post-item {
+    height: 340px !important;
+    cursor: pointer;
+  }
+
+  .post-item img {
+    width: 100% !important;
+    height: 240px !important;
+    border-radius: 10px;
+  }
+}
+
+.post-title-single {
+  font-family: "Tourney", cursive !important;
+  font-size: 25px !important;
+  color: var(--light) !important;
+  text-align: center;
+}
+
+.post-time-single {
+  color: var(--bg-secondary);
+  font-size: 12px;
+}
+
+.post-content-single {
+  color: var(--light);
+  text-align: left !important;
+  font-size: 13px !important;
+}
+
+.post-author-single {
+  color: var(--secondary);
+  background-color: var(--bg-secondary);
+  font-weight: 400;
+  font-size: 10px;
+  display: inline;
+  padding: 4px 7px;
+  border-radius: 5px;
+  text-decoration: none !important;
+}
+/* End Content Posts */
+
+/* Footer */
+footer .copyright {
+  color: var(--bg-secondary);
+  font-size: 13px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+/* End Footer */

@@ -8,12 +8,15 @@ function import_scripts_and_styles()
 add_action('wp_enqueue_scripts', 'import_scripts_and_styles');
 
 
-// Register Menu
 function setup_init()
 {
+    // Register Menu
     register_nav_menus(array(
         'primary' => 'Primary Menu',
     ));
+
+    // Add Theme Support
+    add_theme_support('post-thumbnails');
 }
 
 add_action('after_setup_theme', 'setup_init');
@@ -35,3 +38,14 @@ function add_menu_link_class($atts, $item, $args)
     return $atts;
 }
 add_filter('nav_menu_link_attributes', 'add_menu_link_class', 1, 3);
+
+
+
+function exerpt_title($title)
+{
+    $max = 63;
+    $rewriteTitle = substr($title, 0, $max);
+    $response = strlen($title) > $max ? $rewriteTitle . " &hellip;" : $rewriteTitle;
+    return $response;
+}
+add_filter('the_title', 'exerpt_title', 10, 1);
